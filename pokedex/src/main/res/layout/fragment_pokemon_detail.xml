@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/light_red">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.arthurribeiro.foundation.views.SimpleHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isLeftIconVisible="true"
+        app:leftIconDrawable="@drawable/ic_arrow_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/medium_margin"/>
+
+    <TextView
+        android:id="@+id/text_pokemon_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="@id/header"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:textStyle="bold"
+        android:textSize="@dimen/large_title"
+        tools:text="#001"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/image_pokemon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"
+        app:layout_constraintStart_toEndOf="@id/text_pokemon_id"
+        android:contentDescription="@string/pokemon_image_description"
+        tools:src="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/text_pokemon_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/medium_margin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/large_title"
+        tools:text="Pikachu"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout_pokemon_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_red"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="@color/white"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:padding="@dimen/default_margin"
+        app:tabGravity="start"
+        app:tabMode="scrollable"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_guideline"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/information_pages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout_pokemon_information"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

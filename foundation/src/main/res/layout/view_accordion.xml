@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:theme="@style/Theme.Pokédex"
+    android:background="@color/light_red">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/accordion_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/accordion_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/accordion_icon"
+            tools:text="Accordion Title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/caption_text"
+            android:padding="@dimen/medium_margin"/>
+
+        <ImageView
+            android:id="@+id/accordion_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/medium_margin"
+            tools:background="@color/light_red"
+            android:contentDescription="@string/accordion_button_description"
+            android:src="@drawable/ic_keyboard_arrow_down"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/accordion_inflater_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/accordion_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerColor="@color/white"/>
+
+</LinearLayout>

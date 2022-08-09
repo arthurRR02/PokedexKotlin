@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_red"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_height_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:text="@string/details_height_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_height"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_height_label"
+            app:layout_constraintTop_toTopOf="@id/text_height_label"
+            tools:text="60cm" />
+
+        <TextView
+            android:id="@+id/text_weight_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:text="@string/details_weight_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_height_label" />
+
+        <TextView
+            android:id="@+id/text_weight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_weight_label"
+            app:layout_constraintTop_toTopOf="@id/text_weight_label"
+            tools:text="6,9kg" />
+
+        <TextView
+            android:id="@+id/text_types_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:text="@string/details_types_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_weight_label" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_radius"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/text_types_label"
+            app:layout_constraintStart_toEndOf="@id/text_types_label"
+            app:layout_constraintTop_toTopOf="@id/text_types_label">
+
+            <LinearLayout
+                android:id="@+id/types_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

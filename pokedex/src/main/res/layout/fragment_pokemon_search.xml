@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/light_red">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pokemon_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/pokemon_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/card_bg"
+        app:queryHint="@string/search_name_label"
+        android:backgroundTint="@color/red"
+        app:searchIcon="@drawable/ic_search"
+        app:closeIcon="@drawable/ic_close"
+        app:iconifiedByDefault="false" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_list_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_pokemon_search"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_search"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.arthurribeiro.foundation.views.ErrorFloater
+            android:id="@+id/error_floater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

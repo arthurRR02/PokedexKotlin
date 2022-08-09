@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="pokemon_image_description">Pokemon image</string>
+    <string name="search_label">Search</string>
+    <string name="pokeball_icon_description">pokeball icon</string>
+    <string name="search_name_label">Search by name</string>
+
+
+    <string name="upward_button_description">Upward button</string>
+    <string name="details_tab_label">Details</string>
+    <string name="stats_tab_label">Stats</string>
+    <string name="moves_tab_label">Moves</string>
+    <string name="abilities_tab_label">Abilities</string>
+    <string name="details_height_label">Height:</string>
+    <string name="details_weight_label">Weight:</string>
+    <string name="details_types_label">Types:</string>
+    <string name="see_more_button_label">See more</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--Error region-->
+    <string name="close_icon_description">close icon</string>
+    <string name="try_again_label">Try again</string>
+    <string name="generic_error_message">An error occurred. Please try again in a minute!</string>
+    <string name="no_connection_error_message">Network error! Please check your internet connection and try again.</string>
+    <string name="information_content_description">information</string>
+    <string name="accordion_button_description">Open accordion</string>
+    <!--End of region-->
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/light_red"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="@dimen/card_size"
+        android:layout_height="@dimen/card_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/card_bg"
+        android:layout_margin="@dimen/default_margin"
+        android:padding="@dimen/default_margin"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pokemon_card"
+                android:layout_width="@dimen/card_size"
+                android:layout_height="@dimen/card_size"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:background="@drawable/card_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="@dimen/default_elevation"
+                android:layout_margin="@dimen/default_margin"
+                android:padding="@dimen/default_margin">
+
+                <TextView
+                    android:id="@+id/pokemon_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="#001"
+                    android:textSize="@dimen/body_text"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/pokemon_image"
+                    android:layout_width="@dimen/image_card_size"
+                    android:layout_height="@dimen/image_card_size"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:contentDescription="@string/pokemon_image_description"
+                    tools:src="@tools:sample/avatars"
+                    app:layout_constraintTop_toBottomOf="@id/pokemon_number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/pokemon_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text"
+                    app:layout_constraintTop_toBottomOf="@id/pokemon_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Pikachu" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

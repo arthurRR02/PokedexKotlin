@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.Pokédex"
+    tools:background="@color/light_red">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/error_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/default_radius"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/default_margin">
+
+            <ImageButton
+                android:id="@+id/ic_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/close_icon_description"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/text_error"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/default_margin"
+                android:layout_marginVertical="@dimen/medium_margin"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/ic_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="error" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/try_again_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/try_again_label"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_error" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

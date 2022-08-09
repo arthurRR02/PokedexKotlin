@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pokedexHomeFragment">
+
+    <fragment android:id="@+id/pokedexHomeFragment"
+        tools:layout="@layout/fragment_pokedex_home"
+        android:name="com.arthurribeiro.pokedex.home.PokedexHomeFragment">
+
+        <action android:id="@+id/pokemon_home_fragment_to_search"
+            app:destination="@id/pokemonSearchFragment"/>
+
+        <action android:id="@+id/pokemon_home_fragment_to_details"
+            app:destination="@id/pokemonDetailFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/pokemonSearchFragment"
+        tools:layout="@layout/fragment_pokemon_search"
+        android:name="com.arthurribeiro.pokedex.pokemonsearch.PokemonSearchFragment">
+
+        <argument android:name="pokemonList"
+            app:argType="com.arthurribeiro.model.model.PokemonDTO[]"
+            app:nullable="false"/>
+
+        <action android:id="@+id/pokemon_search_fragment_to_details"
+            app:destination="@id/pokemonDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/pokemonDetailFragment"
+        tools:layout="@layout/fragment_pokemon_detail"
+        android:name="com.arthurribeiro.pokedex.pokemondetail.PokemonDetailFragment">
+
+        <argument android:name="pokemonDetail"
+            app:argType="com.arthurribeiro.model.model.PokemonDetailDTO"
+            app:nullable="false"/>
+    </fragment>
+
+</navigation>

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_red"
+        android:fillViewport="true"
+        android:theme="@style/Theme.Pokédex">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/moves_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/medium_margin">
+
+            <com.arthurribeiro.foundation.views.SimpleHeader
+                android:id="@+id/moves_home_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/medium_margin"
+                app:isRightIconVisible="true"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/moves_home_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_home_header"
+                tools:text="Discharge" />
+
+            <TextView
+                android:id="@+id/moves_home_subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_home_title"
+                tools:text="Inflicts regular damage." />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/moves_home_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                app:dividerColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/moves_home_subtitle" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_accuracy_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/moves_accuracy_label"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/moves_home_divider"/>
+
+            <TextView
+                android:id="@+id/moves_accuracy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_accuracy_label"
+                tools:text="95%" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_damage_type_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/moves_damage_type_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_accuracy" />
+
+            <TextView
+                android:id="@+id/moves_damage_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_damage_type_label"
+                tools:text="Physical" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_introduced_in_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/moves_generation_introduced_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_damage_type" />
+
+            <TextView
+                android:id="@+id/moves_introduced_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintTop_toBottomOf="@id/moves_introduced_in_label"
+                tools:text="generation-iv" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_ailment_inflicted_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/moves_ailment_inflicted_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_introduced_in" />
+
+            <TextView
+                android:id="@+id/moves_ailment_inflicted"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_ailment_inflicted_label"
+                tools:text="Paralysis" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_power_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/moves_power_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_ailment_inflicted" />
+
+            <TextView
+                android:id="@+id/moves_power"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_power_label"
+                tools:text="80" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_power_points_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/moves_power_points_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_power" />
+
+            <TextView
+                android:id="@+id/moves_power_points"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_power_points_label"
+                tools:text="15" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_target_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/moves_target_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_power_points" />
+
+            <TextView
+                android:id="@+id/moves_target"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_target_label"
+                tools:text="All other pokemon" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_elemental_type_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/moves_elemental_type_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_target" />
+
+            <TextView
+                android:id="@+id/moves_elemental_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_elemental_type_label"
+                tools:text="Electric" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_critical_rate_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/critical_hit_rate_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_elemental_type" />
+
+            <TextView
+                android:id="@+id/moves_critical_rate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_critical_rate_label"
+                tools:text="0" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_drain_recoil_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/drain_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_critical_rate" />
+
+            <TextView
+                android:id="@+id/moves_drain_recoil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_drain_recoil_label"
+                tools:text="33" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_flinch_chance_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/flinch_chance_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_drain_recoil" />
+
+            <TextView
+                android:id="@+id/moves_flinch_chance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_flinch_chance_label"
+                tools:text="20%" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_healing_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/healing_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_flinch_chance" />
+
+            <TextView
+                android:id="@+id/moves_healing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_healing_label"
+                tools:text="20" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_minimum_hits_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/minimum_hits_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_healing" />
+
+            <TextView
+                android:id="@+id/moves_minimum_hits"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_minimum_hits_label"
+                tools:text="2" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_maximum_hits_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/maximum_hits_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_minimum_hits" />
+
+            <TextView
+                android:id="@+id/moves_maximum_hits"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_maximum_hits_label"
+                tools:text="2" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_minimum_turns_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/minimum_turns_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_maximum_hits" />
+
+            <TextView
+                android:id="@+id/moves_minimum_turns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_minimum_turns_label"
+                tools:text="2" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_maximum_turns_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/maximum_turns_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_minimum_turns" />
+
+            <TextView
+                android:id="@+id/moves_maximum_turns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_maximum_turns_label"
+                tools:text="2" />
+
+            <com.arthurribeiro.foundation.views.TextWithIcon
+                android:id="@+id/moves_stat_chance_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:text="@string/stat_chance_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_maximum_turns" />
+
+            <TextView
+                android:id="@+id/moves_stat_chance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moves_stat_chance_label"
+                tools:text="20%" />
+
+            <com.arthurribeiro.foundation.views.Accordion
+                android:id="@+id/moves_accordion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/moves_stat_chance"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:titleText="@string/learned_by"/>
+
+            <com.arthurribeiro.foundation.views.ErrorFloater
+                android:id="@+id/error_floater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/moves_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
