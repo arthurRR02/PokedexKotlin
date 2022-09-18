@@ -13,6 +13,7 @@
         android:theme="@style/Theme.Pokédex">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/abilities_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -56,12 +57,53 @@
                 app:dividerColor="@color/white"/>
 
             <com.arthurribeiro.foundation.views.TextWithIcon
-                android:layout_width="wrap_content"
+                android:id="@+id/abilities_generation_label"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/abilities_home_divider"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:text="@string/abilities_generation_label"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/medium_margin"/>
+
+            <TextView
+                android:id="@+id/abilities_generation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/abilities_generation_label"
+                app:layout_constraintStart_toStartOf="@id/abilities_generation_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/default_margin"
+                tools:text="Generation-iii"
+                android:textColor="@color/white"
+                android:textSize="@dimen/body_text"/>
+
+            <com.arthurribeiro.foundation.views.Accordion
+                android:id="@+id/abilities_accordion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/abilities_generation"
+                android:layout_marginTop="@dimen/medium_margin"
+                app:titleText="@string/learned_by"/>
+
+            <com.arthurribeiro.foundation.views.ErrorFloater
+                android:id="@+id/error_floater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/abilities_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

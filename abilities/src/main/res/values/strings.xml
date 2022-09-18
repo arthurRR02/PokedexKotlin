@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abilities_generation_label">Generation:</string>
+    <string name="abilities_generation_modal_description">The generation this ability originated in.</string>
+    <string name="learned_by">Learned by pokémon</string>
+</resources>

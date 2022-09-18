@@ -29,11 +29,6 @@ data class DamageClassDTO(
 ) : Parcelable
 
 @Parcelize
-data class EffectEntryDTO(
-    val effect: String? = null
-) : Parcelable
-
-@Parcelize
 data class FlavorTextEntriesDTO(
     @SerializedName("flavor_text") val flavorText: String? = null,
     @SerializedName("version_group") val versionGroup: VersionGroupDTO? = null
@@ -41,12 +36,6 @@ data class FlavorTextEntriesDTO(
 
 @Parcelize
 data class VersionGroupDTO(
-    val name: String? = null,
-    val url: String? = null
-) : Parcelable
-
-@Parcelize
-data class GenerationDTO(
     val name: String? = null,
     val url: String? = null
 ) : Parcelable

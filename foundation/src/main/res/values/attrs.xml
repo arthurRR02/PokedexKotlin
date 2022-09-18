@@ -24,7 +24,7 @@
 <declare-styleable name="Accordion">
     <attr name="accordionBackground" format="reference|color"/>
     <attr name="titleText" format="string"/>
-    <attr name="accordionIconColor" format="reference|color"/>
-    <attr name="dividerColor" format="integer"/>
+    <attr name="accordionIconColor" format="integer"/>
+    <attr name="divColor" format="integer"/>
 </declare-styleable>
 </resources>

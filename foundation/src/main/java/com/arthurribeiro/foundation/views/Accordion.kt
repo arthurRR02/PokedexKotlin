@@ -16,6 +16,7 @@ class Accordion @JvmOverloads constructor(context: Context, attrs: AttributeSet?
     LinearLayout(context, attrs, defStyleAttr), ViewAnimation {
 
     private val binding = ViewAccordionBinding.inflate(LayoutInflater.from(context), this, true)
+    private var _isExpanded: Boolean = false
 
     var accordionBackground: ColorStateList? = null
     set(value) {
@@ -29,10 +30,10 @@ class Accordion @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         binding.accordionTitle.text = value
     }
 
-    var iconColor: ColorStateList? = null
+    var iconColor: Int? = null
     set(value) {
         field = value
-        binding.accordionIcon.background.setTintList(value)
+        value?.let { binding.accordionIcon.setBackgroundColor(it) }
     }
 
     var dividerColor: Int? = null
@@ -45,14 +46,16 @@ class Accordion @JvmOverloads constructor(context: Context, attrs: AttributeSet?
     set(value) {
         field = value
         inflaterViewVisibility = if (value) View.VISIBLE else View.GONE
+        _isExpanded = isExpanded
     }
+    get() = _isExpanded
 
     var inflaterViewVisibility: Int = View.GONE
     set(value) {
         field = value
         binding.accordionInflaterView.visibility = value
 
-        isExpanded = when(binding.accordionInflaterView.visibility){
+        this._isExpanded = when(binding.accordionInflaterView.visibility){
             View.GONE -> false
             else -> true
         }
@@ -76,11 +79,10 @@ class Accordion @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
             accordionBackground = attributes.getColorStateList(R.styleable.Accordion_accordionBackground)
             titleText = attributes.getString(R.styleable.Accordion_titleText)
-            iconColor = attributes.getColorStateList(R.styleable.Accordion_accordionIconColor)
-            dividerColor = attributes.getInteger(R.styleable.Accordion_dividerColor, R.color.white)
+            iconColor = attributes.getInteger(R.styleable.Accordion_accordionIconColor, R.color.white)
+            dividerColor = attributes.getInteger(R.styleable.Accordion_divColor, R.color.white)
 
             if (accordionBackground == null) accordionBackground = ContextCompat.getColorStateList(context, R.color.light_red)
-            if (iconColor == null) iconColor = ContextCompat.getColorStateList(context, R.color.white)
 
             binding.accordionIcon.setBackgroundColor(Color.TRANSPARENT)
 
@@ -91,21 +93,27 @@ class Accordion @JvmOverloads constructor(context: Context, attrs: AttributeSet?
     private fun changeExpansion(){
         setInflaterViewAnimation()
         animateArrowIcon()
-        isExpanded = !isExpanded
+        this._isExpanded = !this._isExpanded
     }
 
     private fun setInflaterViewAnimation(){
-        if (isExpanded) animationCollapse(binding.accordionInflaterView)
+        if (this._isExpanded) animationCollapse(binding.accordionInflaterView)
         else animationExpand(binding.accordionInflaterView)
     }
 
     private fun animateArrowIcon(){
-        if (isExpanded) animateArrowToDown(binding.accordionIcon)
+        if (this._isExpanded) animateArrowToDown(binding.accordionIcon)
         else animateArrowToUp(binding.accordionIcon)
     }
     private fun setClickContainer(){
         binding.accordionContainer.setOnClickListener {
             changeExpansion()
+        }
+    }
+
+    fun addInflaterView(view: View?) {
+        binding.accordionInflaterView.apply {
+            this.addView(view)
         }
     }
 

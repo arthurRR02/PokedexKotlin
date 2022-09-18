@@ -43,7 +43,7 @@ dependencies {
     //versions
     def koin_version = "3.2.0"
     def retrofit_version = "2.9.0"
-    def navigation_version = "2.5.1"
+    def navigation_version = "2.5.2"
     def coroutines_version = "1.6.1"
 
     implementation "io.insert-koin:koin-android:$koin_version"
@@ -55,7 +55,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
     implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

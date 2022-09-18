@@ -3,53 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/abilities/src/main/res/layout/activity_abilities_home.xml" value="0.1503531786074672" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/abilities/src/main/res/layout/activity_abilities_main.xml" value="0.1" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/abilities/src/main/res/layout/fragment_abilities_home.xml" value="0.14984863773965693" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/app/src/main/res/layout/activity_main.xml" value="0.296195652173913" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/drawable/bottom_sheet_bg.xml" value="0.198" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/drawable/card_bg.xml" value="0.198" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/drawable/ic_arrow_back.xml" value="0.125" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/drawable/ic_arrow_upward.xml" value="0.198" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/drawable/ic_keyboard_arrow.xml" value="0.125" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/calendar_cell.xml" value="0.296195652173913" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/simple_header.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/view_accordion.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/view_activity_base.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/view_calendar.xml" value="0.25384615384615383" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/view_custom_bottom_sheet_dialog_fragment.xml" value="0.296195652173913" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/view_error_floater.xml" value="0.22" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/view_modal.xml" value="0.1" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/view_simple_header.xml" value="0.296195652173913" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/foundation/src/main/res/layout/view_text_with_icon.xml" value="0.33" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/moves/src/main/res/drawable/tab_bg.xml" value="0.1195" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/moves/src/main/res/layout/activity_moves_main.xml" value="0.1503531786074672" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/moves/src/main/res/layout/fragment_moves_home.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/moves/src/main/res/layout/info_modal.xml" value="0.296195652173913" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/moves/src/main/res/layout/pokemon_accordion_item.xml" value="0.22" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/moves/src/main/res/layout/pokemons_accordion.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/drawable/card_bg.xml" value="0.123" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/drawable/circle_animation.xml" value="0.22" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/drawable/ic_arrow_back.xml" value="0.198" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/drawable/ic_catching_pokemon.xml" value="0.198" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/drawable/ic_close.xml" value="0.123" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/drawable/types_bg.xml" value="0.1255" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/drawable/types_bg_2.xml" value="0.1255" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/activity_main.xml" value="0.1503531786074672" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/activity_pokedex_home_fragment.xml" value="0.296195652173913" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_abilities_page.xml" value="0.1503531786074672" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_bse.xml" value="0.14984863773965693" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_details_page.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_moves_page.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_pokedex_home.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_pokedex_home_list.xml" value="0.25384615384615383" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_pokemon_detail.xml" value="0.27330173775671407" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_pokemon_search.xml" value="0.22" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/fragment_stats_page.xml" value="0.25" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/item_pokemon.xml" value="0.33" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/item_pokemon_list.xml" value="0.37598425196850394" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/item_pokemon_search.xml" value="0.33" />
-        <entry key="..\:/Users/unimu/AndroidStudioProjects/Pokdex/pokedex/src/main/res/layout/recycler_placeholder.xml" value="0.14984863773965693" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/abilities/src/main/res/layout/activity_abilities_main.xml" value="0.1503531786074672" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/abilities/src/main/res/layout/fragment_abilities_home.xml" value="0.18" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/abilities/src/main/res/layout/info_modal.xml" value="0.13333333333333333" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/abilities/src/main/res/layout/pokemon_accordion_item.xml" value="0.13333333333333333" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/abilities/src/main/res/layout/pokemons_accordion.xml" value="0.13333333333333333" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/foundation/src/main/res/layout/item_accordion.xml" value="0.33" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/foundation/src/main/res/layout/view_accordion.xml" value="0.13333333333333333" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/moves/src/main/res/layout/activity_moves_main.xml" value="0.1503531786074672" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/moves/src/main/res/layout/fragment_moves_home.xml" value="0.21" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/moves/src/main/res/layout/info_modal.xml" value="0.1503531786074672" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/moves/src/main/res/layout/pokemon_accordion_item.xml" value="0.1503531786074672" />
+        <entry key="..\:/Arthur/Projetos/Pokdex/moves/src/main/res/layout/pokemons_accordion.xml" value="0.13333333333333333" />
       </map>
     </option>
   </component>

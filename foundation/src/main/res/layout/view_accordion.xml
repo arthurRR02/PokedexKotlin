@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toStartOf="@id/accordion_icon"
             tools:text="Accordion Title"
             android:textColor="@color/white"
-            android:textSize="@dimen/caption_text"
+            android:textSize="@dimen/body_text"
             android:padding="@dimen/medium_margin"/>
 
         <ImageView
@@ -41,12 +41,17 @@
         android:id="@+id/accordion_inflater_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_marginHorizontal="@dimen/medium_margin"
+        android:visibility="gone"
         android:orientation="vertical"/>
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/accordion_divider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:dividerColor="@color/white"/>
+        app:dividerColor="@color/white"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginHorizontal="@dimen/medium_margin"/>
 
 </LinearLayout>

@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.arthurribeiro.foundation.utils.IntentHelper.Companion.MOVE_URL
 import com.arthurribeiro.foundation.R as foundationRes
 import com.arthurribeiro.foundation.utils.firstCharUpperCase
 import com.arthurribeiro.foundation.utils.toPercent
 import com.arthurribeiro.foundation.views.Modal
 import com.arthurribeiro.model.model.MoveDetailDTO
+import com.arthurribeiro.model.model.PokemonDTO
 import com.arthurribeiro.moves.MovesViewModel
 import com.arthurribeiro.moves.R
 import com.arthurribeiro.moves.databinding.FragmentMovesHomeBinding
@@ -50,7 +52,6 @@ class MovesHomeFragment : Fragment() {
         setObservers()
         setActions()
         setModals()
-        setAccordion()
     }
 
     override fun onDestroy() {
@@ -64,14 +65,14 @@ class MovesHomeFragment : Fragment() {
                 is Resource.Loading -> showProgressBar()
                 is Resource.Success -> {
                     dismissProgressBar()
-                    setViews(it.data)
+                    it.data.let { data ->
+                        setViews(data)
+                    }
                 }
                 is Resource.Error.NoConnection -> {
-                    dismissProgressBar()
                     handleErrorFloater(foundationRes.string.no_connection_error_message)
                 }
                 else -> {
-                    dismissProgressBar()
                     handleErrorFloater(foundationRes.string.generic_error_message)
                 }
             }
@@ -113,12 +114,12 @@ class MovesHomeFragment : Fragment() {
             movesMinimumTurns.text = (move.meta?.minTurns ?: "-").toString()
             movesMaximumTurns.text = (move.meta?.maxTurns ?: "-").toString()
             movesStatChance.text = (move.meta?.statChance ?: "-").toString()
-        }
-    }
 
-    private fun setAccordion(){
-        binding.movesAccordion.apply {
-            addView(accordionBinding.root)
+            movesAccordion.apply {
+                addInflaterView(accordionBinding.root)
+            }
+
+            setAdapter(move.learnedByPokemon)
         }
     }
 
@@ -270,6 +271,7 @@ class MovesHomeFragment : Fragment() {
     }
 
     private fun handleErrorFloater(stringRes: Int) {
+        dismissProgressBar()
         with(binding) {
             errorFloater.isVisible = true
             errorFloater.errorText = getString(stringRes)
@@ -278,6 +280,14 @@ class MovesHomeFragment : Fragment() {
                 viewModel.getMoveUrl()?.let { url -> viewModel.getMoveDetail(url) }
                 errorFloater.isVisible = false
             }
+        }
+    }
+
+    private fun setAdapter(pokemonList: List<PokemonDTO>? = null){
+        with(accordionBinding){
+            val adapter = PokemonNameAdapter(pokemonList)
+            accordionRecycler.layoutManager = LinearLayoutManager(requireContext())
+            accordionRecycler.adapter = adapter
         }
     }
 
