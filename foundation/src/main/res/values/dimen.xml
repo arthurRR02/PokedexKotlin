@@ -10,6 +10,7 @@
     <dimen name="large_title">30sp</dimen>
     <dimen name="caption_text">20sp</dimen>
     <dimen name="body_text">16sp</dimen>
+    <dimen name="tiny_text">12sp</dimen>
     <!--end of region-->
 
     <!--radius-->
@@ -23,8 +24,8 @@
     <!--end of region-->
 
     <!--elevation-->
-    <dimen name="card_size">200dp</dimen>
-    <dimen name="image_card_size">150dp</dimen>
+    <dimen name="card_size">180dp</dimen>
+    <dimen name="image_card_size">90dp</dimen>
     <!--end of region-->
 
 </resources>

@@ -30,14 +30,12 @@ class PokemonListAdapter(
 
             with(binding) {
                 if (isLoading) {
-                    shimmer.isVisible = true
                     pokemonCard.isVisible = false
                     shimmer.startShimmer()
                 } else {
                     Handler(Looper.getMainLooper()).postDelayed({
-                        shimmer.isVisible = false
                         shimmer.stopShimmer()
-
+                        shimmer.hideShimmer()
                         pokemonCard.isVisible = true
                     }, 3000)
 
