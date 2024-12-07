@@ -50,6 +50,7 @@ class AbilitiesHomeFragment : Fragment() {
             getAbilityUrl()?.let { getAbilitiesDetail(it) }
         }
         setObservers()
+        setActions()
     }
 
     override fun onDestroy() {
@@ -139,6 +140,12 @@ class AbilitiesHomeFragment : Fragment() {
                 viewModel.getAbilityUrl()?.let { url -> viewModel.getAbilitiesDetail(url) }
                 errorFloater.isVisible = false
             }
+        }
+    }
+
+    private fun setActions() {
+        with(binding) {
+            abilitiesHomeHeader.setOnRightIconClickListener { requireActivity().finish() }
         }
     }
 }
